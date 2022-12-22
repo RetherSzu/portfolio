@@ -372,8 +372,8 @@ const tagCloud = TagCloud('.sphere-text', myTags, {
 
     // animation speed
     // slow, normal, fast
-    maxSpeed: 'fast',
-    initSpeed: 'fast',
+    maxSpeed: 'slow',
+    initSpeed: 'slow',
 
     // 0 = top
     // 90 = left

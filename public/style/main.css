@@ -950,10 +950,6 @@ h3.title {
     border-radius: 50%;
 }
 
-.tool-description {
-
-}
-
 .main-footer {
     height: 100vh;
     background: url('../images/bg_dark_grey.jpg') repeat;
@@ -975,13 +971,6 @@ h3.title {
     height: 100%;
 }
 
-
-
-
-
-
-
-
 @media screen and (max-width: 1000px) {
 
     .button.link {
@@ -992,8 +981,6 @@ h3.title {
         width: 100%;
     }
 }
-
-
 
 @media screen and (max-width: 800px) {
     .p-wrap {
@@ -1027,7 +1014,6 @@ h3.title {
 
     .last .carousel-nav {
         top: 0;
-        z-index: inherit;
     }
 
     .carousel-language-text {
