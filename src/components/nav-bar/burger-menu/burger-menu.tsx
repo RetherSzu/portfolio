@@ -26,7 +26,7 @@ const BurgerMenu = () => {
             <nav className={`${isOpen ? "absolute" : "hidden"} w-full left-0 top-[96px] bg-[#070707] py-8`}>
                 <ul className="flex flex-col justify-between gap-8">
                     {configNavBar.map((item, index) => (
-                        <BurgerItem key={index} href={item.path} text={item.label} />
+                        <BurgerItem key={index} href={item.path} text={item.label} onClick={handleClick} />
                     ))}
                 </ul>
             </nav>
