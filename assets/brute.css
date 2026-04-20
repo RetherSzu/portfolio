@@ -1,0 +1,262 @@
+/* --------------------------------------------------------------
+/* = This is Brute
+-------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+/* = Containers
+-------------------------------------------------------------- */
+.container-small {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container-large {
+    width: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------
+/* = Grid
+-------------------------------------------------------------- */
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-50 {
+    width: 50%;
+    padding: 0 var(--radius-large);
+    max-width: 50%;
+}
+
+.col-25 {
+    width: 25%;
+    padding: 0 var(--radius-large);
+    max-width: 25%;
+}
+
+.col-33 {
+    width: 33.3%;
+    padding: 0 var(--radius-large);
+    max-width: 33.3%;
+}
+
+.col-75 {
+    width: 75%;
+    padding: 0 var(--radius-large);
+    max-width: 75%;
+}
+
+.col-100 {
+    width: 100%;
+    padding: 0 var(--radius-large);
+    max-width: 100%;
+}
+
+.row.unpadded .col-50,
+.row.unpadded .col-25,
+.row.unpadded .col-33,
+.row.unpadded .col-75,
+.row.unpadded .col-100 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row.unwrapped {
+    flex-wrap: nowrap;
+}
+
+
+.right-padded-col {
+    padding-right: 80px;
+}
+
+@media screen and (max-width: 840px) {
+
+    .col-50,
+    .col-25,
+    .col-33,
+    .col-75 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .col-50.dont-collapse,
+    .col-25.collapse-to-50,
+    .col-75.collapse-to-50 {
+        width: 50%;
+        max-width: 50%;
+    }
+
+    .container,
+    .container-small,
+    .container-large {
+        padding: 0 var(--radius-large);
+    }
+
+    .right-padded-col {
+        padding-right: var(--radius-large);
+    }
+}
+
+/* --------------------------------------------------------------
+/* = Keylines
+-------------------------------------------------------------- */
+.row.unpadded.full-row-border-top::before,
+.row.unpadded.full-row-border-bottom::before {
+    left: 0;
+    width: 100%;
+}
+
+.full-row-border-top,
+.full-col-border-top,
+.full-row-border-bottom,
+.full-col-border-bottom {
+    position: relative;
+}
+
+.full-row-border-top::before {
+    content: "";
+    background: var(--border);
+    height: 1px;
+    width: calc(100% - calc(var(--radius-large) * 2));
+    top: 0;
+    left: var(--radius-large);
+    position: absolute;
+}
+
+.full-row-border-bottom::after {
+    content: "";
+    background: var(--border);
+    height: 1px;
+    width: calc(100% - calc(var(--radius-large) * 2));
+    bottom: 0;
+    left: var(--radius-large);
+    position: absolute;
+}
+
+.full-col-border-top::before {
+    content: "";
+    background: var(--border);
+    height: 1px;
+    width: calc(100% - calc(var(--radius-large) * 2));
+    top: 0;
+    left: var(--radius-large);
+    position: absolute;
+}
+
+.full-col-border-bottom::after {
+    content: "";
+    background: var(--border);
+    height: 1px;
+    width: calc(100% - calc(var(--radius-large) * 2));
+    bottom: 0;
+    left: var(--radius-large);
+    position: absolute;
+}
+
+/* --------------------------------------------------------------
+/* = Admonition
+-------------------------------------------------------------- */
+
+.admonition {
+    border-radius: var(--radius-regular);
+    border: 1px solid var(--border);
+}
+
+.admonition img {
+    width: 24px;
+    height: 24px;
+}
+
+.admonition-header {
+    display: flex;
+    gap: var(--radius-regular);
+}
+
+.admonition.note {
+    background-color: var(--border);
+}
+
+.admonition.note img {
+    color: rgb(0, 184, 217);
+}
+
+.admonition.tip {
+    background-color: rgba(0, 184, 217, 0.16);
+    border-color: rgba(0, 184, 217, 0.32);
+}
+
+.admonition.mportant {
+    background-color: rgba(34, 197, 94, 0.16);
+    border-color: rgba(34, 197, 94, 0.32);
+}
+
+.admonition.warning {
+    background-color: rgba(255, 171, 0, 0.16);
+    border-color: rgba(255, 171, 0, 0.32);
+}
+
+.admonition.caution {
+    background-color: rgba(255, 86, 48, 0.16);
+    border-color: rgba(255, 86, 48, 0.32);
+}
+
+#glcanvas {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-large);
+    aspect-ratio: 16 / 9;
+}
+
+#theme-toggle-btn {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    padding: 0;
+    border-radius: 50%;
+    background: none;
+    color: var(--text-primary);
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle-btn:hover {
+    background: var(--border)
+}
+
+.text-nowrap {
+    text-wrap: nowrap;
+}
+
+.items-baseline {
+    align-items: baseline;
+}
+
+.text-overflow {
+    overflow: hidden;
+    margin-left: var(--radius-large);
+    white-space: nowrap;
+    text-decoration: none;
+    text-overflow: ellipsis;
+}
+
+.footnote-definition {
+    display: flex;
+    gap: calc(var(--spacer-small) / 2);
+    align-items: baseline;
+}

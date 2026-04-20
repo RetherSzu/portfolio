@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+          rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script type="module">
+        (function () {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                } else if (savedTheme === 'light') {
+                    document.body.classList.add('light-mode');
+                } else if (prefersDark) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.add('light-mode');
+                }
+            } catch (e) {
+            }
+        })();
+    </script>
+</head>
+<body>
+<div id="main"></div>
+</body>
+</html>
